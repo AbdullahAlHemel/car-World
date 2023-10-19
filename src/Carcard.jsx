@@ -1,7 +1,7 @@
  
 import {Link} from "react-router-dom" 
 
-const Carcard = ({car, cars, setCar }) => {
+const   Carcard = ({car, cars, setCar }) => {
     const {_id ,brand, model, price, from, experience ,category ,details , photo} = car
 
     return (

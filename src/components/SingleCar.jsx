@@ -5,39 +5,47 @@ import Swal from 'sweetalert2'
 const SingleCar = () => {
     const carData = useLoaderData();
     const {_id ,brand, model, price, from, experience ,category ,details , photo} = carData
-    const handleDelete = _id => {
-        console.log(_id);
-        Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
-          }).then((result) => {
-            if (result.isConfirmed) {
+    // const handleDelete = _id => {
+    //     console.log(_id);
+    //     Swal.fire({
+    //         title: 'Are you sure?',
+    //         text: "You won't be able to revert this!",
+    //         icon: 'warning',
+    //         showCancelButton: true,
+    //         confirmButtonColor: '#3085d6',
+    //         cancelButtonColor: '#d33',
+    //         confirmButtonText: 'Yes, delete it!'
+    //       }).then((result) => {
+    //         if (result.isConfirmed) {
              
-              fetch(`https://car-server-abdullahalhemel.vercel.app/car/${_id}`,{
-                method:'DELETE',
+    //           fetch(`https://car-server-abdullahalhemel.vercel.app/car/${_id}`,{
+    //             method:'DELETE',
 
-              }
-              )
-              .then(res => res.json())
-              .then(data => {
-                console.log(data);
-                if(data.deletedCount > 0){
-                    Swal.fire(
-                        'Deleted!',
-                        'Your file has been deleted.',
-                        'success'
-                      )
-                      const remaining = cars.filter(c => c._id !== _id)
-                      setCar(remaining)
-                }
-              })
-            }
-          })
+    //           }
+    //           )
+    //           .then(res => res.json())
+    //           .then(data => {
+    //             console.log(data);
+    //             if(data.deletedCount > 0){
+    //                 Swal.fire(
+    //                     'Deleted!',
+    //                     'Your file has been deleted.',
+    //                     'success'
+    //                   )
+    //                   const remaining = cars.filter(c => c._id !== _id)
+    //                   setCar(remaining)
+    //             }
+    //           })
+    //         }
+    //       })
+    // }
+
+    const AddCard = _id =>{
+      Swal.fire(
+                             'Card Added!',
+                             'This car has been added in card.',
+                             'success'
+                           )
     }
     return (
         <div className='bg-[#e5ffd852] my-10 py-10'>
@@ -61,8 +69,10 @@ const SingleCar = () => {
                   <Link to={`/updatecar/${_id}`}>
                   <button className=' bg-green-400 font-semibold hover:bg-green-500 md:p-5 p-1 rounded hover:text-white'>Update</button>
                   </Link>
-                 <button className=' bg-red-300 rounded font-semibold hover:bg-red-500 md:p-5 hover:text-white'
-                   onClick={() => handleDelete(_id)}>Delete</button>
+                  <button onClick={AddCard} className=' bg-blue-400 font-semibold hover:bg-blue-500 md:p-4 p-1 rounded hover:text-white'>Add Card</button>
+
+                 {/* <button className=' bg-red-300 rounded font-semibold hover:bg-red-500 md:p-5 hover:text-white'
+                   onClick={() => handleDelete(_id)}>Delete</button> */}
                 
              </div>
             </div>
