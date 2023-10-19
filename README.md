@@ -15,5 +15,5 @@ It is one of the great projects of your Car Company,  and anybody can find out a
 
 I managed the state of the assignment project's from all lot of website, vlogs, browser, and my storage .actually a designed this website by using react.js , html, tailwind, js, css etc. Most part of the website designed by react js, first i find out a link from tailwind than it run in cmd and create a file ,then a lot of inner file create and design  by using vs code and chrome, deploy it in surge , that's a excellent website,thanks for read
 
-website name: CarStore24
+website name: CarStore24 ;
 live link : https://assignment-10-ae122.web.app/
