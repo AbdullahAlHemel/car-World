@@ -15,7 +15,7 @@ import SingleCar from './components/SingleCar';
 import Home from './components/Home';
 import PrivateRoute from './Privateroute';
 import Contract from './Contract';
-// import MyCard from './components/MyCard';
+import MyCard from './components/MyCard';
 
 
 
@@ -65,12 +65,12 @@ const router = createBrowserRouter([
       path: '/contract',
       element: <Contract></Contract>
     },
-    // {
-    //   path:'/mycard',
-    //   element: <MyCard></MyCard>,
-    //   loader: () => fetch('https://car-server-abdullahalhemel.vercel.app/car'),
+    {
+      path:'/mycard',
+      element: <PrivateRoute><MyCard></MyCard></PrivateRoute>,
+      loader: () => fetch('https://car-server-abdullahalhemel.vercel.app/car'),
 
-    // }
+    }
   ]
  }
 ]);

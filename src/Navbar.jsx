@@ -52,7 +52,7 @@ const Navbar = () => {
       
     <>  
        <button onClick={handleSignOut} className=" flex">
-       <p className="btn w-[100px] border border-y-red-900 bg-red-100">Sign Out</p></button>
+       <p className="btn md:w-[100px] w-[40px] border border-y-red-900 bg-red-100">Sign Out</p></button>
 
        <div className="">
         {/* {user.email} */}

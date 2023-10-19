@@ -12,6 +12,7 @@ const SignIn = () => {
     const {signInUser, signInWithGoogle} = useContext(AuthContext)
     const location = useLocation(); 
     const navigate = useNavigate();
+    
 
     const handleSignIn = e => {
         e.preventDefault();
@@ -56,6 +57,8 @@ const SignIn = () => {
         signInWithGoogle()
         .then(result => {
             console.log(result.user);
+          navigate(location?.state? location.state : '/' );   
+
         })
         .catch(error => {
             console.error(error)

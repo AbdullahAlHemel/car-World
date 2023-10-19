@@ -2,7 +2,6 @@ import { useContext, useState } from 'react';
 import { AuthContext } from '../Auth/AuthProvider';
 import Swal from 'sweetalert2'
 import { Link, useLocation, useNavigate  } from 'react-router-dom';
-import swal from 'sweetalert';
 
 const SingUp = () => {
   const [registerError, setRegisterError]  = useState('');
@@ -45,16 +44,6 @@ const SingUp = () => {
                     
             })
         })
-        // .catch(error=>{
-        //     console.error(error);
-        //     swal({
-        //         title: "Error!",
-        //         text: "Try again with password and unique email",
-        //         icon: "warning",
-                
-        //         dangerMode: true,
-        //       })    
-        // })
 
         if(password.length < 6){
             return  setRegisterError('password should not be at least 6 characters or longer');
@@ -76,23 +65,8 @@ const SingUp = () => {
               })
             // console.log(data);
             return navigate(location?.state? location.state : '/' );  
-             
-        //   swal({
-        //     title: "Register Sucessful!",
-        //     text: "Thank You ",
-           
-        //  })
+                 
         }
-        // .catch(error=>{
-        //     console.error(error);
-        //     swal({
-        //         title: "Error!",
-        //         text: "Try again with password and unique email",
-        //         icon: "warning",
-                
-        //         dangerMode: true,
-        //       })    
-        // })
     }
 
     return (

@@ -40,7 +40,7 @@ const SingleCar = () => {
           })
     }
     return (
-        <div className='bg-lime-200 py-10'>
+        <div className='bg-[#e5ffd852] my-10 py-10'>
         <div className='m-auto w-[1000px] flex '>
             <div>
             <div className='flex w-[600px]'>
