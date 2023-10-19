@@ -39,9 +39,7 @@ const SingUp = () => {
                 res.json()
                )
             .then(data => {
-                console.log(data);
-                
-                    
+                console.log(data);                                   
             })
         })
 
