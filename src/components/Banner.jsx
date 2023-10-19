@@ -2,9 +2,7 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <>
-        
-       
+        <>     
     <div className='border border-orange-200 p-10 bg-[#fffef5a6] md:pt-[30px]'>
         
         <h1 className='text-orange-400 text-center mb-4 text-[25px] font-medium underline'>WELCOME TO CAR WORLD</h1>
