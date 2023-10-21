@@ -99,7 +99,7 @@ const SingUp = () => {
             </div>
         </form>
         {registerError && <p className=" mt-2 text-center mb-4 mt-1 text-red-600">{registerError}</p> }
-        <p className='text-center'>Already have a account? <Link to='/login' className='underline text-blue-700 font-semibold'>Login</Link></p>
+        <p className='text-center'>Already have a account? <Link to='/signin' className='underline text-blue-700 font-semibold'>Login</Link></p>
         </div>
         </div>
             </div>

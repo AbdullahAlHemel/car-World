@@ -73,8 +73,8 @@ const Navbar = () => {
 
 
 <div class="navbar-start">
-<img className='md:w-[160px] md:h-[80px] md:mr-0 mr-16 w-[75px] h-[35px]'  src={logo} alt="" />
-
+<Link to='/'><img className='md:w-[160px] md:h-[80px] md:mr-0 mr-16 w-[75px] h-[35px]'  src={logo} alt="" />
+</Link>
   <div class="dropdown">
     <label tabindex="0" class="btn btn-ghost lg:hidden">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
@@ -105,7 +105,7 @@ const Navbar = () => {
        <div className="">
         {/* {user.email} */}
        <img style={{borderRadius:'50%',marginLeft:'40%', width:'40%'}} src= {user.photoURL} alt="" />
-        <h2 className="text-[10px] ml-3">{user.displayName}</h2>
+        <h2 className="text-[10px] ml-3 text-center">{user.displayName}</h2>
         </div>
     </> : 
      <Link to='/signin' className="ml-3" class="btn bg-blue-200">Login</Link>

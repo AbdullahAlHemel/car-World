@@ -1,6 +1,6 @@
 import {useLoaderData} from "react-router-dom";
 import Swal from 'sweetalert2'
-const UpdateCar = () => {
+const BuggatiUpdate = () => {
     const car = useLoaderData();
     const {_id, brand, model, price, from, experience,category, details, photo} = car
 
@@ -22,7 +22,7 @@ const UpdateCar = () => {
 
 
         //send data to the server
-        fetch(`https://car-server-abdullahalhemel.vercel.app/honda/${_id}`, {
+        fetch(`https://car-server-abdullahalhemel.vercel.app/bugatti/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type' : 'application/json'
@@ -139,4 +139,5 @@ const UpdateCar = () => {
     )
 };
 
-export default UpdateCar;
+export default BuggatiUpdate;
+import React from 'react';

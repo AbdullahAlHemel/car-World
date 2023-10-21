@@ -1,7 +1,12 @@
 import React from 'react';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import {useEffect } from 'react'
 const SpecialCar = () => {
-    return (
+    useEffect(() => {
+        AOS.init({duration:"900"})
+        })
+    return ( <div data-aos="zoom-out">
         <div className='md:my-10 md:mb-16'>
             <h2 className=' text-center text-[30px] font-semibold my-6'>SPECIAL LIMITED EDITION</h2>
         < div className='grid grid-cols-1 md:grid-cols-3'>
@@ -29,7 +34,7 @@ const SpecialCar = () => {
           </div>  
             <h2 className=' mt-4 text-center text-green-600 font-semibold'>Budget: <p className='text-[24px]'>$ 1000500000</p></h2>
     </div></div>
-    </div>
+    </div></div>
     )
 };
 

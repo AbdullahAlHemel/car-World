@@ -1,6 +1,6 @@
 import {useLoaderData} from "react-router-dom";
 import Swal from 'sweetalert2'
-const UpdateCar = () => {
+const HondaUpdate = () => {
     const car = useLoaderData();
     const {_id, brand, model, price, from, experience,category, details, photo} = car
 
@@ -139,4 +139,5 @@ const UpdateCar = () => {
     )
 };
 
-export default UpdateCar;
+export default HondaUpdate;
+

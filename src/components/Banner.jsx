@@ -1,8 +1,16 @@
 import React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import {useEffect } from 'react';
 
 const Banner = () => {
+    useEffect(() => {
+        AOS.init({duration:"900"})
+        })
     return (
         <>     
+        <div data-aos="zoom-out" >
+
     <div className='border border-orange-200 p-10 bg-[#fffef5a6] md:pt-[30px]'>
         
         <h1 className='text-orange-400 text-center mb-4 text-[25px] font-medium underline'>WELCOME TO CAR WORLD</h1>
@@ -26,7 +34,9 @@ const Banner = () => {
         <a href="#item3" className="btn btn-xs md:text-[20px] bg-red-700 text-white hover:bg-blue-600">3</a> 
         <a href="#item4" className="btn btn-xs md:text-[20px] bg-red-700 text-white hover:bg-blue-600">4</a>
         </div>
-    </div> </>
+    </div>
+    </div>
+     </>
     );
 };
 export default Banner;

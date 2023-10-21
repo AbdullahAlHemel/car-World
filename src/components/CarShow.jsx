@@ -1,8 +1,15 @@
 import React from 'react';
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import {useEffect } from 'react';
 const CarShow = () => {
+    useEffect(() => {
+        AOS.init({duration:"1100"})
+        })
+    
     return (
-        <div>
+        <div><div data-aos="fade-up"
+        data-aos-anchor-placement="top-bottom">
             <div className="hero min-h-screen mb-10" style={{backgroundImage: 'url(https://i.ibb.co/hHBv84R/pexels-s-von-hoerst-2920064.jpg)'}}>
                 <div className="hero-overlay bg-opacity-60"></div>
                   <div className="hero-content text-center text-neutral-content">
@@ -13,7 +20,7 @@ const CarShow = () => {
                    </div>
                 </div>
             </div>
-        </div>
+        </div></div>
     );
 };
 

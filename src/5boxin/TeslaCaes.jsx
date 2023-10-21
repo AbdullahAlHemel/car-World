@@ -1,12 +1,13 @@
- import {Link} from "react-router-dom" 
- import AOS from 'aos';
- import 'aos/dist/aos.css';
- import {useEffect } from 'react';
-const   Carcard = ({car, cars, setCar }) => {
-    const {_id ,brand, model, price, from, experience ,category ,details , photo} = car
-    useEffect(() => {
-      AOS.init({duration:"1000"})
-      })
+import React from 'react';
+import {Link} from "react-router-dom" 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import {useEffect } from 'react';
+const TeslaCard = ({car, cars, setCar }) => {  
+      const {_id ,brand, model, price, from, experience ,category ,details , photo} = car
+useEffect(() => {
+  AOS.init({duration:"1000"})
+  })
     return (
         <div><div data-aos="fade-left">
         <div className=" md:flex p-4 md:bg-[#bad8fc3b] md:first-letter:shadow-lg md:h-[450px] w-full h-full md:border rounded-[15%]">
@@ -25,13 +26,13 @@ const   Carcard = ({car, cars, setCar }) => {
                   <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
                   <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" checked />
                   <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
-                  <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-300" />
-                  <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-200" />
+                  <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
                 </div>
               <p>
               {
                         details.length > 10? <p className='text-slate-500 leading-8 md:w-full'>{details.slice(0,100)} 
-                        <Link to={`/${_id}`} className='rounded btn-primary hover:translate-y-1 underline p-1.5 m-2 text-white bg-yellow-900 '>Details</Link>
+                        <Link to={`/tesla/${_id}`} className='rounded btn-primary hover:translate-y-1 underline p-1.5 m-2 text-white bg-yellow-900 '>Details</Link>
 
                         </p>
                         :
@@ -45,4 +46,4 @@ const   Carcard = ({car, cars, setCar }) => {
     );
 };
 
-export default Carcard;
+export default TeslaCard;

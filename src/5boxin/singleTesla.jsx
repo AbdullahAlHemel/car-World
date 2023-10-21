@@ -1,9 +1,8 @@
+
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
-import Swal from 'sweetalert2' 
-
-const SingleCar = () => {
-    const carData = useLoaderData();
+import Swal from 'sweetalert2'
+const SingleTesla = () => { const carData = useLoaderData();
     const {_id ,brand, model, price, from, experience ,category ,details , photo} = carData
     const handleDelete = _id => {
         console.log(_id);
@@ -18,7 +17,7 @@ const SingleCar = () => {
           }).then((result) => {
             if (result.isConfirmed) {
              
-              fetch(`https://car-server-abdullahalhemel.vercel.app/bmw/${_id}`,{
+              fetch(`https://car-server-abdullahalhemel.vercel.app/tesla/${_id}`,{
                 method:'DELETE',
 
               }
@@ -66,7 +65,7 @@ const SingleCar = () => {
             </div>
             <div>
             <div className='btn-group btn-group-vertical space-y-4 my-44 md:float-left'>
-                  <Link to={`/updatebmw/${_id}`}>
+                  <Link to={`/updatetesla/${_id}`}>
                   <button className=' bg-green-400 font-semibold hover:bg-green-500 md:p-5 p-1 rounded hover:text-white'>Update</button>
                   </Link>
                   <button onClick={AddCard} className=' bg-blue-400 font-semibold hover:bg-blue-500 md:p-4 p-1 rounded hover:text-white'>Add Card</button>
@@ -80,8 +79,7 @@ const SingleCar = () => {
             <div className='m-auto text-[20px] font-medium text-amber-800 md:w-[900px]'>{details}</div>
            
             </div>
-        
     );
 };
 
-export default SingleCar;
+export default SingleTesla;
