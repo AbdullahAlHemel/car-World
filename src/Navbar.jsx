@@ -65,15 +65,8 @@ const Navbar = () => {
 
 
 
-
-
-
-
-
-
-
 <div class="navbar-start">
-<Link to='/'><img className='md:w-[160px] md:h-[80px] md:mr-0 mr-16 w-[75px] h-[35px]'  src={logo} alt="" />
+<Link to='/'><img className='hover:bg-purple-50 md:w-[160px] md:h-[80px] md:mr-0 mr-16 w-[75px] h-[35px]'  src={logo} alt="" />
 </Link>
   <div class="dropdown">
     <label tabindex="0" class="btn btn-ghost lg:hidden">

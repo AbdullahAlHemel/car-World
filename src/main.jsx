@@ -173,9 +173,6 @@ const router = createBrowserRouter([
     },
 
 
-
-
-
     {
       path: '/signup',
       element: <SingUp></SingUp>
@@ -200,7 +197,7 @@ const router = createBrowserRouter([
     {
       path:'/mycard',
       element: <PrivateRoute><MyCard></MyCard></PrivateRoute>,
-      loader: () => fetch('https://car-server-abdullahalhemel.vercel.app/car'),
+      loader: () => fetch('https://car-server-abdullahalhemel.vercel.app/mbenz'),
 
     }
   ]
