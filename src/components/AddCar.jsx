@@ -20,7 +20,7 @@ const AddCar = () => {
         console.log(newCar);
 
         //send data to the server
-        fetch('https://car-server-abdullahalhemel.vercel.app/honda', {
+        fetch('https://car-server-abdullahalhemel.vercel.app/bmw', {
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

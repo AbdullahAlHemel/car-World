@@ -68,11 +68,11 @@ const router = createBrowserRouter([
       loader: () => fetch('https://car-server-abdullahalhemel.vercel.app/bugatti'),
       element:<PrivateRoute><Buggatti></Buggatti></PrivateRoute>
     },
-    {
-      path: '/bugatti/:id',
-      loader: ({params}) => fetch(`https://car-server-abdullahalhemel.vercel.app/bugatti/${params.id}`),
-      element: <SingleBugatti></SingleBugatti>
-    },
+    // {
+    //   path: '/bugatti/:id',
+    //   loader: ({params}) => fetch(`https://car-server-abdullahalhemel.vercel.app/bugatti/${params.id}`),
+    //   element: <SingleBugatti></SingleBugatti>
+    // },
      //tesla
     {
       path: '/tesla',
