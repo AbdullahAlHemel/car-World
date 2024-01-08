@@ -7,7 +7,6 @@ const UpdateCar = () => {
     const updateCar = event => {
         event.preventDefault()
         const form = event.target;
-        
         const brand = form.brand.value;
         const model = form.model.value;
         const price = form.price.value;
